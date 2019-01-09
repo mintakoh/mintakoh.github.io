@@ -2,7 +2,6 @@
 layout: page
 title: About
 permalink: /about/
-cover:  "/assets/instacode.png"
 ---
 
 * Author: 오민탁(Mintak OH)
