@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-!(https://github.com/mintakoh/mintakoh.github.io/blob/master/assets/profile-placeholder.gif)
+![이미지](https://raw.githubusercontent.com/mintakoh/mintakoh.github.io/master/assets/profile-placeholder.gif)
 * Author: 오민탁(Mintak OH)
 * Github: [http://github.com/mintakoh](http://github.com/mintakoh)
 * [NHN엔터테인먼트](https://www.nhnent.com/ko/index.nhn) TOAST ROOKIE 6기
