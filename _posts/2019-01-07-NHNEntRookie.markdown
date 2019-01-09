@@ -7,4 +7,4 @@ categories: NHN엔터테인먼트-ROOKIE-6기
 tags: NHN-Ent
 ---
 
-공백
+입문교육 소감 
