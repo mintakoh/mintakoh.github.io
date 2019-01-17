@@ -7,4 +7,4 @@ categories: 귀여운양파
 tags: 고양이 양파 cat
 ---
 
-![이미지](https://github.com/mintakoh/mintakoh.github.io/blob/master/assets/cat_onion/onion16.jpg)
+![이미지](https://raw.githubusercontent.com/mintakoh/mintakoh.github.io/master/assets/cat_onion/onion16.jpg)
