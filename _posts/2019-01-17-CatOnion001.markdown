@@ -3,7 +3,7 @@ layout: post
 title:  "양파 - 1"
 date:   2019-01-17 23:55:43
 author: Mintak OH
-categories: 귀여운 양파 보세요
+categories: 귀여운양파
 tags: 고양이 양파 cat
 ---
 
