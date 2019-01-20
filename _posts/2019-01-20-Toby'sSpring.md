@@ -82,7 +82,9 @@ tags: spring java toby
 	* DIP(The Dependency Inversion Principle): 의존관계 역전 원칙
 
 #### 높은 응집도와 낮은 결합도
-
+&nbsp; &nbsp; 개방 폐쇄 원칙은 **높은 응집도**와 **낮은 결합도**라는 소프트웨어 개발의 고전적인 원리로도 설명이 가능하다. 응집도가 높다는 건 하나의 모듈, 클래스가 하나의 책임 또는 관심사에만 집중되어 있다는 뜻이다. 
+##### 높은 응집도
+&nbsp; &nbsp; 
 
 ## 1.4 제어의 역전(IoC)
 ### 1.4.1 오브젝트 팩토리
@@ -112,6 +114,6 @@ tags: spring java toby
 ### 1.8.3 DataSource 인터페이스로 변환
 ### 1.8.4 프로퍼티 값의 주입
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM5MjgwMjEyLDQwMDYxODAwOSwxMzc5OT
-c0MjQ3XX0=
+eyJoaXN0b3J5IjpbMTIwMDkyMjM5MSw0MDA2MTgwMDksMTM3OT
+k3NDI0N119
 -->
