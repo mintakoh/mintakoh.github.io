@@ -73,7 +73,7 @@ tags: spring java toby
 
 ### 1.3.4 원칙과 패턴
 #### 개방 폐쇄 원칙
-&nbsp; &nbsp; 
+&nbsp; &nbsp; 지금까지 해온 리팩토링 작업의 특징과 최종적으로 개선된 설계와 코드의 장점이 무엇인지 효과적으로 설명할 수 있다. 개방 폐쇄 원칙은 깔끔한 설계를 위해 적용 가능한 객체지향 설계 원칙 중의 하나다. '클래스나 모듈은 확장에는 열려 있어야 하고 변경에는 닫혀있어야 한다'라고 정의할 수 있다. 
 
 ## 1.4 제어의 역전(IoC)
 ### 1.4.1 오브젝트 팩토리
@@ -103,5 +103,5 @@ tags: spring java toby
 ### 1.8.3 DataSource 인터페이스로 변환
 ### 1.8.4 프로퍼티 값의 주입
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3OTk3NDI0N119
+eyJoaXN0b3J5IjpbNDAwNjE4MDA5LDEzNzk5NzQyNDddfQ==
 -->
