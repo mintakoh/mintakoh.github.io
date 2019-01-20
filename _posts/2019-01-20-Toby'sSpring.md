@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "토비의 스프링 1장"
+title:  "토비의 스프링 1장(작성중)"
 date:   2019-01-20 18:40:00
 author: Mintak OH
 categories: 토비의스프링
