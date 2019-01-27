@@ -3,7 +3,7 @@ layout: post
 title:  "BaseCamp 1주차 회고"
 date:   2019-01-13 21:30:43
 author: Mintak OH
-categories: NHN엔터테인먼트-ROOKIE-6기
+categories: Rookie-6th
 tags: NHN-Ent
 ---
 
@@ -20,5 +20,5 @@ tags: NHN-Ent
 기획안을 큰 틀에서 바꾸진 않겠지만 사용자 관점에서 생각하지 않았던 부분들은 조금씩 수정해야한다. <br/>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTIwMDQ5Nl19
+eyJoaXN0b3J5IjpbOTM4NTQ2MzEsMTUxMTIwMDQ5Nl19
 -->
