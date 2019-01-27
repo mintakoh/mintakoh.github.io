@@ -3,7 +3,7 @@ layout: post
 title:  "입문교육 이후"
 date:   2019-01-07 23:58:41
 author: Mintak OH
-categories: NHN엔터테인먼트-ROOKIE-6기
+categories: Rookie-6th
 tags: NHN-Ent
 cover:  "/assets/manner_edu/stamp_tour_cover_image.png"
 ---
