@@ -44,7 +44,7 @@ sed -i '{줄번호}{i옵션} {문자열}' 파일이름
 ```
 위와 같은 방식으로 특정 행에 문자열을 추가할 수도 있습니다.
 ```bash
-sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/tomcat_account/bin/setenv.sh
+sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/{api 프로젝트 명}/bin/setenv.sh
 ```
 특정 행을 지정하여 문자열을 추가하는 경우 문자열을 추가하려는 파일의 내용이 바뀌거나 했을 경우에는 위험할 수 있지만 우선 이런식으로 진행했습니다.
 
@@ -121,7 +121,7 @@ sed -i 's/JkMount \/\*.jsp tomcat/JkMount \/\* {web 프로젝트 명}/' ~/apps/a
 sed -i 's/JkMount \/\*. tomcat//' ~/apps/apache/conf/httpd.conf
 sed -i 's/JkMount \/jkmanager\/\* jkstatus//' ~/apps/apache/conf/httpd.conf
 
-## tomcat_mail change war
+## web tomcat change war
 sed -i 's/{web 프로젝트 명}.war/' ~/apps/{web 프로젝트 명}/conf/server.xml
 
 ## tomcat_accout change port
@@ -146,21 +146,24 @@ sed -i "5i CATALINA_PID=/home_path/apps/{web 프로젝트 명}/bin/tomcat.pid" ~
 
 ## apache change workers.properties
 sed -i 's/tomcat/{web 프로젝트 명}/g' ~/apps/apache/conf/workers.properties
-sed -i 's/worker.list={web 프로젝트 명}/worker.list=tomcat_mail ,{api 프로젝트 명}/' ~/apps/apache/conf/workers.properties
-sed -i "10i worker.{api 프로젝트 명}.type=ajp13 \nworker.{}.port=18001\n#worker.tomcat_account.connect_timeout=1000\n#worker.tomcat_account.prepost_timeout=1000\nworker.tomcat_account.socket_timeout=10\nworker.tomcat_account.connection_pool_timeout=10\n#worker.tomcat_account.reply_timeout=1000\n" ~/apps/apache/conf/workers.properties
+sed -i 's/worker.list={web 프로젝트 명}/worker.list={web 프로젝트 명},{api 프로젝트 명}/' ~/apps/apache/conf/workers.properties
+sed -i "10i worker.{api 프로젝트 명}.type=ajp13 
+\nworker..port=18001
+\n#worker.{api 프로젝트 명}.connect_timeout=1000
+\n#worker.{api 프로젝트 명}.prepost_timeout=1000
+\nworker.{api 프로젝트 명}.socket_timeout=10
+\nworker.{api 프로젝트 명}.connection_pool_timeout=10
+\n#worker.{api 프로젝트 명}.reply_timeout=1000\n" ~/apps/apache/conf/workers.properties
 
 
 ## tomcat profile default setting
-sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/tomcat_account/bin/setenv.sh
-sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=web"' ~/apps/tomcat_mail/bin/setenv.sh
+sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/{api 프로젝트 명}/bin/setenv.sh
+sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=web"' ~/apps/{web 프로젝트 명}/bin/setenv.sh
 ```
 
 
 * * *
-스크립트 작성이 처음이라 부족한 부분이 많습니다. 
-java 설치할 때나 apache, tomcat 설치 할 때 \[Y/N]이 나오는 부분이나
-git pull을 처음 할 때 아이디 비밀번호를 물어보는 경우 자동으로 입력되는 부분을 찾아보려 했는데 아직 못찾았습니다. 찾게되면 공유하겠습니다.
-더 좋은 방법으로 작성할 수 있게 계속 찾아보겠지만 문제점이나 더 나은 방법이 있다면 공유 부탁드립니다.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDcxODU5N119
+eyJoaXN0b3J5IjpbLTE3Nzk3MTk0MDldfQ==
 -->
