@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "서버 세팅을 위한 bash shell script 작성방법"
+date:   2019-02-14 11:20:00
+author: Mintak OH
+categories: Dev
+tags: NHN-Ent dev script shell
+---
+
 # Q. 서버 세팅을 하려는게 1~2대가 아닌 여러대 일 때?
 다양한 방법이 있지만,  스크립트를 작성하여 서버 세팅을 하는 방법을 소개하겠다.
 
@@ -53,5 +62,5 @@ sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/{t
 * * *
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDkyNzExOTBdfQ==
+eyJoaXN0b3J5IjpbNTUwMDQ3ODk1XX0=
 -->
