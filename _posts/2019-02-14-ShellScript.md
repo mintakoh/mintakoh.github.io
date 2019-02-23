@@ -22,7 +22,7 @@ echo '{문자열}' >> 파일
 ```
 echo 와 >> 를 사용하면 파일의 제일 끝부분에 문자열을 추가할 수 있다.
 ```bash
-echo 'export JAVA_HOME=/home_path/apps/jdk' >> ~/.bash_profile
+echo 'export JAVA_HOME=/{home_path}/apps/jdk' >> ~/.bash_profile
 echo 'export PATH=${JAVA_HOME}/bin:$PATH' >> ~/.bash_profile
 ```
 echo를 사용하여 다양한 스크립트 작성이 가능하겠지만 우선 위 코드처럼 파일의 제일 끝부분에 문자열을 집어넣는 용도로만 사용했다.
@@ -62,5 +62,5 @@ sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/{t
 * * *
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUwMDQ3ODk1XX0=
+eyJoaXN0b3J5IjpbNjc5MzEwMzczXX0=
 -->
