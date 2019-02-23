@@ -64,19 +64,19 @@ sed -i '13i export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=db"' ~/apps/to
 ## install java
 ./set_webapps.sh install jdk@openjdk8u_hotspot_8u192b12
 
-echo 'export JAVA_HOME=/home1/irteam/apps/jdk' >> ~/.bash_profile
+echo 'export JAVA_HOME=/home_path/apps/jdk' >> ~/.bash_profile
 echo 'export PATH=${JAVA_HOME}/bin:$PATH' >> ~/.bash_profile
 
 ## install apache
 ./set_webapps.sh install apache@2.4.37
 
-echo 'export APACHE_HTTP_HOME=/home1/irteam/apps/apache' >> ~/.bash_profile
+echo 'export APACHE_HTTP_HOME=/home_path/apps/apache' >> ~/.bash_profile
 echo 'export PATH=${APACHE_HTTP_HOME}/bin:$PATH' >> ~/.bash_profile
 
 ## install tomcat
 ./set_webapps.sh install tomcat@8.5.28
 
-echo 'export TOMCAT_HOME=/home1/irteam/apps/tomcat' >> ~/.bash_profile
+echo 'export TOMCAT_HOME=/home_path/apps/tomcat' >> ~/.bash_profile
 echo 'export PATH=${TOMCAT_HOME}/bin:$PATH' >> ~/.bash_profile
 
 source ~/.bash_profile
@@ -85,9 +85,9 @@ source ~/.bash_profile
 ## git clone
 mkdir -p ~/build
 cd ~/build
-git clone https://github.com/nhnent/{프로젝트 이름}.git
+git clone https://github.com/{유저명}/{프로젝트 이름}.git
 
-## tomcat_mail
+## web 프로젝트
 # build
 cd ~/build/{프로젝트 이름}/{프로젝트 web 폴더명}
 ./mvnw clean package -DskipTests
@@ -96,7 +96,7 @@ mv {프로젝트 web 폴더명}*.war {프로젝트 web 폴더명}.war
 rm ~/deploy/{프로젝트 web 폴더명}.war
 cp {프로젝트 web 폴더명}.war ~/deploy/
 
-## tomcat_account
+## 
 # build
 cd ~/build/{프로젝트 이름}/{프로젝트 api 폴더명}
 ./mvnw clean package -DskipTests
@@ -162,5 +162,5 @@ java 설치할 때나 apache, tomcat 설치 할 때 \[Y/N]이 나오는 부분�
 git pull을 처음 할 때 아이디 비밀번호를 물어보는 경우 자동으로 입력되는 부분을 찾아보려 했는데 아직 못찾았습니다. 찾게되면 공유하겠습니다.
 더 좋은 방법으로 작성할 수 있게 계속 찾아보겠지만 문제점이나 더 나은 방법이 있다면 공유 부탁드립니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyODc2NTg5XX0=
+eyJoaXN0b3J5IjpbMTA5NTg2ODUzNl19
 -->
