@@ -96,7 +96,7 @@ mv {프로젝트 web 폴더명}*.war {프로젝트 web 폴더명}.war
 rm ~/deploy/{프로젝트 web 폴더명}.war
 cp {프로젝트 web 폴더명}.war ~/deploy/
 
-## 
+## api 프로젝트
 # build
 cd ~/build/{프로젝트 이름}/{프로젝트 api 폴더명}
 ./mvnw clean package -DskipTests
@@ -110,27 +110,27 @@ cp {프로젝트 api 폴더명}.war ~/deploy/
 cd ~/apps
 cp -r apache-tomcat-8.5.28 apache-tomcat-8.5.28_2
 
-ln -s apache-tomcat-8.5.28_2 tomcat_mail
-mv tomcat tomcat_account
+ln -s apache-tomcat-8.5.28_2 {web 프로젝트 명}
+mv tomcat {api 프로젝트 명}
 
 cd ~
 
 
 ## setting apache
-sed -i 's/JkMount \/\*.jsp tomcat/JkMount \/\* tomcat_mail/' ~/apps/apache/conf/httpd.conf
-sed -i 's/JkMount \/\*.nhn tomcat//' ~/apps/apache/conf/httpd.conf
+sed -i 's/JkMount \/\*.jsp tomcat/JkMount \/\* {web 프로젝트 명}/' ~/apps/apache/conf/httpd.conf
+sed -i 's/JkMount \/\*. tomcat//' ~/apps/apache/conf/httpd.conf
 sed -i 's/JkMount \/jkmanager\/\* jkstatus//' ~/apps/apache/conf/httpd.conf
 
 ## tomcat_mail change war
-sed -i 's/nhnent-example/hnhmail.war/' ~/apps/tomcat_mail/conf/server.xml
+sed -i 's/{web 프로젝트 명}.war/' ~/apps/{web 프로젝트 명}/conf/server.xml
 
 ## tomcat_accout change port
-sed -i 's/"7001"/"17001"/' ~/apps/tomcat_account/conf/server.xml
-sed -i 's/"8001"/"18001"/' ~/apps/tomcat_account/conf/server.xml
-sed -i 's/"9001"/"19001"/' ~/apps/tomcat_account/conf/server.xml
+sed -i 's/"7001"/"17001"/' ~/apps/{api 프로젝트 명}/conf/server.xml
+sed -i 's/"8001"/"18001"/' ~/apps/{api 프로젝트 명}/conf/server.xml
+sed -i 's/"9001"/"19001"/' ~/apps/{api 프로젝트 명}/conf/server.xml
 
 ## tomcat_account change war
-sed -i 's/nhnent-example/hnhlogin.war/' ~/apps/tomcat_account/conf/server.xml
+sed -i 's/{api 프로젝트 명}.war/' ~/apps/{api 프로젝트 명}/conf/server.xml
 
 ## tomcat insert export catalina
 sed -i "2i export CATALINA_HOME=/home1/irteam/apps/tomcat_account" ~/apps/tomcat_account/bin/catalina.sh
@@ -162,5 +162,5 @@ java 설치할 때나 apache, tomcat 설치 할 때 \[Y/N]이 나오는 부분�
 git pull을 처음 할 때 아이디 비밀번호를 물어보는 경우 자동으로 입력되는 부분을 찾아보려 했는데 아직 못찾았습니다. 찾게되면 공유하겠습니다.
 더 좋은 방법으로 작성할 수 있게 계속 찾아보겠지만 문제점이나 더 나은 방법이 있다면 공유 부탁드립니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NTg2ODUzNl19
+eyJoaXN0b3J5IjpbLTkxNzYyMjMzM119
 -->
