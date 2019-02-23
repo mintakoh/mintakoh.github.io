@@ -133,21 +133,21 @@ sed -i 's/"9001"/"19001"/' ~/apps/{api 프로젝트 명}/conf/server.xml
 sed -i 's/{api 프로젝트 명}.war/' ~/apps/{api 프로젝트 명}/conf/server.xml
 
 ## tomcat insert export catalina
-sed -i "2i export CATALINA_HOME=/home1/irteam/apps/tomcat_account" ~/apps/tomcat_account/bin/catalina.sh
-sed -i "3i export TOMCAT_HOME=/home1/irteam/apps/tomcat_account" ~/apps/tomcat_account/bin/catalina.sh
-sed -i "4i export CATALINA_BASE=/home1/irteam/apps/tomcat_account" ~/apps/tomcat_account/bin/catalina.sh
-sed -i "5i CATALINA_PID=/home1/irteam/apps/tomcat_account/bin/tomcat.pid" ~/apps/tomcat_account/bin/catalina.sh
+sed -i "2i export CATALINA_HOME=/home_path/apps/{api 프로젝트 명}" ~/apps/{api 프로젝트 명}/bin/catalina.sh
+sed -i "3i export TOMCAT_HOME=/home_path/apps/{api 프로젝트 명}" ~/apps/{api 프로젝트 명}/bin/catalina.sh
+sed -i "4i export CATALINA_BASE=/home_path/apps/{api 프로젝트 명}" ~/apps/{api 프로젝트 명}/bin/catalina.sh
+sed -i "5i CATALINA_PID=/home_path/apps/{api 프로젝트 명}/bin/tomcat.pid" ~/apps/{api 프로젝트 명}/bin/catalina.sh
 
-sed -i "2i export CATALINA_HOME=/home1/irteam/apps/tomcat_mail" ~/apps/tomcat_mail/bin/catalina.sh
-sed -i "3i export TOMCAT_HOME=/home1/irteam/apps/tomcat_mail" ~/apps/tomcat_mail/bin/catalina.sh
-sed -i "4i export CATALINA_BASE=/home1/irteam/apps/tomcat_mail" ~/apps/tomcat_mail/bin/catalina.sh
-sed -i "5i CATALINA_PID=/home1/irteam/apps/tomcat_mail/bin/tomcat.pid" ~/apps/tomcat_mail/bin/catalina.sh
+sed -i "2i export CATALINA_HOME=/home_path/apps/{web 프로젝트 명}" ~/apps/{web 프로젝트 명}/bin/catalina.sh
+sed -i "3i export TOMCAT_HOME=/home_path/apps/{web 프로젝트 명}" ~/apps/{web 프로젝트 명}/bin/catalina.sh
+sed -i "4i export CATALINA_BASE=/home_path/apps/{web 프로젝트 명}" ~/apps/{web 프로젝트 명}/bin/catalina.sh
+sed -i "5i CATALINA_PID=/home_path/apps/{web 프로젝트 명}/bin/tomcat.pid" ~/apps/{web 프로젝트 명}/bin/catalina.sh
 
 
 ## apache change workers.properties
-sed -i 's/tomcat/tomcat_mail/g' ~/apps/apache/conf/workers.properties
-sed -i 's/worker.list=tomcat_mail/worker.list=tomcat_mail ,tomcat_account/' ~/apps/apache/conf/workers.properties
-sed -i "10i worker.tomcat_account.type=ajp13 \nworker.tomcat_account.port=18001\n#worker.tomcat_account.connect_timeout=1000\n#worker.tomcat_account.prepost_timeout=1000\nworker.tomcat_account.socket_timeout=10\nworker.tomcat_account.connection_pool_timeout=10\n#worker.tomcat_account.reply_timeout=1000\n" ~/apps/apache/conf/workers.properties
+sed -i 's/tomcat/{web 프로젝트 명}/g' ~/apps/apache/conf/workers.properties
+sed -i 's/worker.list={web 프로젝트 명}/worker.list=tomcat_mail ,{api 프로젝트 명}/' ~/apps/apache/conf/workers.properties
+sed -i "10i worker.{api 프로젝트 명}.type=ajp13 \nworker.{}.port=18001\n#worker.tomcat_account.connect_timeout=1000\n#worker.tomcat_account.prepost_timeout=1000\nworker.tomcat_account.socket_timeout=10\nworker.tomcat_account.connection_pool_timeout=10\n#worker.tomcat_account.reply_timeout=1000\n" ~/apps/apache/conf/workers.properties
 
 
 ## tomcat profile default setting
@@ -162,5 +162,5 @@ java 설치할 때나 apache, tomcat 설치 할 때 \[Y/N]이 나오는 부분�
 git pull을 처음 할 때 아이디 비밀번호를 물어보는 경우 자동으로 입력되는 부분을 찾아보려 했는데 아직 못찾았습니다. 찾게되면 공유하겠습니다.
 더 좋은 방법으로 작성할 수 있게 계속 찾아보겠지만 문제점이나 더 나은 방법이 있다면 공유 부탁드립니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNzYyMjMzM119
+eyJoaXN0b3J5IjpbMjA0MDcxODU5N119
 -->
